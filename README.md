@@ -4,7 +4,7 @@
 
 TypeFactory simplifies the creation and utilisation of typed and constrained value objects.
 
-## Why?
+## Why?
 
 Passing around primitive values (strings, ints, floats etc...) tends to led towards code checking constraints at multiple layers within a single app and subsequently to inconsistencies and bugs as constraint checks in different layers diverge.
 
@@ -15,7 +15,7 @@ By casting the raw data as value objects based on constrained types, and using o
 - bugs related to bad data may be reduced
 - validation is naturally pushed out to the application boundaries leaving code that can be focused on implementing domain logic/business rules
 
-## Features
+## Features
 
 - extend an existing type with constraints
 - built-in constraints for string and numeric types that match JSON Schema constraints (e.g. minimum, multiple_of, pattern etc...)
@@ -23,9 +23,9 @@ By casting the raw data as value objects based on constrained types, and using o
 - introspect types and values to extract and utilise their constraints, such as when creating HTML forms
 - extended ValueError exception that reports all failing constraints for a value
 
-## Examples
+## Examples
 
-### Defining types
+### Defining types
 
 ```python
 from typefactory import make_type
@@ -37,7 +37,7 @@ Username = make_type(str, "Username", [string.MinLength(4), string.MaxLength(32)
 Password = make_type(str, "Password", [string.MinLength(8), string.MaxLength(256)])
 ```
 
-### Using types
+### Using types
 
 ```
 >>> my_age = Age(40)
@@ -76,7 +76,7 @@ def register(id: Id, username: Username, password: Password):
     ...
 ```
 
-## Installation
+## Installation
 
 Install from [PyPI](https://pypi.org/project/typefactory): 
 
