@@ -1,6 +1,6 @@
 # TypeFactory
 
-**TypeFactory is in a pre-alpha state and should not be used in production.  The overall API, types and exceptions are expected to change significantly.**
+**TypeFactory is in an alpha state.  The API, types and exceptions may change significantly.**
 
 TypeFactory simplifies the creation and utilisation of typed and constrained value objects.
 

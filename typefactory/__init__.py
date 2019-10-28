@@ -3,6 +3,9 @@ Implement constraints as per https://json-schema.org/understanding-json-schema/r
 """
 from typing import TypeVar, Type
 
+
+__version__ = "0.1.0"
+
 BaseType = TypeVar("BaseType")
 
 
