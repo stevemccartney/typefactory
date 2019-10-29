@@ -1,2 +1,4 @@
-pytest
+coverage
 mypy
+pytest
+pytest-cov

@@ -1,3 +1,6 @@
+"""
+Test string constraints return an error string when value does not satisfy constraint and None when it does
+"""
 from typefactory.constraints import string
 
 

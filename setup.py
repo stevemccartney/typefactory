@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="typefactory",
-    version="0.1.0",
+    version="0.1.1",
     author="Steve McCartney",
     author_email="python+typefactory@reconvergent.com",
     url="https://github.com/stevemccartney/typefactory",

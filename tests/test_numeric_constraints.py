@@ -1,3 +1,6 @@
+"""
+Test numeric constraints return an error string when value does not satisfy constraint and None when it does
+"""
 from decimal import Decimal
 
 import pytest
