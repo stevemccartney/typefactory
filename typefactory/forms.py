@@ -62,8 +62,14 @@ def make_password_field(value_type: Type, name: str, base_field_type: Type[Field
     return make_string_field(value_type, name, base_field_type, widget_class=ConstrainedPasswordInput, **kwargs)
 
 
-def make_string_field(value_type: Type, name: str, base_field_type: Type[Field] = StringField, widget_class=ConstrainedTextInput, **kwargs) -> Type:
-    kwargs["filters"] = (lambda x: value_type(x) if x is not None else "", )
+def make_string_field(
+    value_type: Type,
+    name: str,
+    base_field_type: Type[Field] = StringField,
+    widget_class=ConstrainedTextInput,
+    **kwargs
+) -> Type:
+    kwargs["filters"] = (lambda x: value_type(x) if x is not None else "",)
     kwargs["widget"] = widget_class(value_type)
 
     def __init__(self, *args, **kwargs):

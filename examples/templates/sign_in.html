@@ -5,7 +5,7 @@
 </style>
 <form method="POST">
     {{ form.hidden_tag() }}
-    <div>{{ form.username.label() }}: {{ form.username() }}</div>
+    <div>{{ form.username.label() }}: {{ form.username() }} {% if form.username.errors %}{{ form.username.errors }}{% endif %}</div>
     <div>{{ form.password.label() }}: {{ form.password() }}</div>
     <div><input type="submit"></div>
 </form>

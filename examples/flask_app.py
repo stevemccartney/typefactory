@@ -11,11 +11,13 @@ from typefactory.forms import make_string_field, make_password_field
 
 UserName = make_type(str, "UserName", [string.MinLength(4), string.MaxLength(12), string.Pattern("[a-zA-Z]+")])
 UserNameField = make_string_field(
-    UserName, "UserNameField", render_kw=dict(title="Username must be between 4 and 12 alphabetical characters")
+    value_type=UserName,
+    name="UserNameField",
+    render_kw=dict(title="Username must be between 4 and 12 alphabetical characters"),
 )
 
 Password = make_type(str, "Password", [string.MinLength(8), string.MaxLength(256)])
-PasswordField = make_password_field(Password, "PasswordField")
+PasswordField = make_password_field(value_type=Password, name="PasswordField")
 
 
 class SignInForm(FlaskForm):
