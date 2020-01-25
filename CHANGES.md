@@ -1,6 +1,10 @@
 # Changelog
 
-## v0.1.1 = 2019-10-29
+## v0.1.2 - 2020-01-25
+
+- Include all subpackages automatically via find_packages
+
+## v0.1.1 - 2019-10-29
 
 - Add tests for instantiating a new type with valid and invalid values
 - Improve test module comments

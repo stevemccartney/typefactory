@@ -1,13 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
     name="typefactory",
-    version="0.1.1",
+    version="0.1.2",
     author="Steve McCartney",
     author_email="python+typefactory@reconvergent.com",
     url="https://github.com/stevemccartney/typefactory",
-    packages=["typefactory"],
+    packages=find_packages(),
     license="Apache-2.0",
     description="Simplify the creation and utilisation of typed and constrained value objects in Python 3",
     long_description=open("README.md").read(),
